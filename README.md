@@ -6,3 +6,4 @@ Please set your:
 app.config['MAIL_USERNAME'] = 'yourmail@gmail.com'
 app.config['MAIL_PASSWORD'] = 'password'
 For setting the password please refer to this link: https://support.google.com/mail/answer/185833?hl=en-GB
+For registering more email ids refer to this route once server starts: /register
