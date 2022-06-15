@@ -12,10 +12,14 @@ app.config['MAIL_PASSWORD'] = 'password'.
 
 For setting the password please refer to this link: https://support.google.com/mail/answer/185833?hl=en-GB .
 
-Paper for the new architecture: https://www.ijtsrd.com/engineering/computer-engineering/47869/vggface-transfer-learning-and-siamese-network-for-face-recognition/aafaq-altaf
+For registering more email ids refer to this route once server starts: /register.
 
-![login](https://user-images.githubusercontent.com/70970247/173773539-df1ffa27-b664-498f-8252-75ff6711a0d5.PNG)
+Paper for the new architecture: https://www.ijtsrd.com/engineering/computer-engineering/47869/vggface-transfer-learning-and-siamese-network-for-face-recognition/aafaq-altaf
 
 ![predictions](https://user-images.githubusercontent.com/70970247/173773458-23bafa00-967f-4ffb-9ca4-ccfe19a52999.PNG)
 
-For registering more email ids refer to this route once server starts: /register.
+![login](https://user-images.githubusercontent.com/70970247/173773539-df1ffa27-b664-498f-8252-75ff6711a0d5.PNG)
+
+
+
+
