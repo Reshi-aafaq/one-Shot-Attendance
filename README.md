@@ -1,3 +1,5 @@
+Use python 3.7.9
+pip install -r requirements.txt
 Download the model from https://www.kaggle.com/code/raafaq/face-recognition-using-vggface-transfer-learning/data named as "mod2" & paste it in this folder then rename to "modelll"
 You can find the scripted for training the model here https://www.kaggle.com/code/raafaq/face-recognition-using-vggface-transfer-learning/
 Please set your:
