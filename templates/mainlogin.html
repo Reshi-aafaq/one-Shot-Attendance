@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename = 'css/styl.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src= " {{ url_for('static',filename = 'images/wave.png') }}">
+	<div class="container">
+		<div class="img">
+			<img src="{{ url_for('static',filename = 'images/bg.svg') }}">
+		</div>
+
+        <div class="login-content">
+
+            <form method="post">
+            <img src="{{ url_for('static',filename = 'images/avatar.svg')}}">
+            <h2 class="title">Welcome</h2>
+
+            <div class="div">
+
+
+                {# This hidden_tag is a CSRF security feature. #}
+                {{ form.hidden_tag() }}
+
+
+
+
+
+
+                {{ form.email.label }} {{ form.email }} <br> <br>
+
+
+            </div>
+            <br>
+
+            <div class="div">
+
+                {{ form.clas.label }} {{ form.clas }} <br> <br>
+
+                  </div>
+                <p class = 'btn'>  {{ form.submit() }}  </p>
+
+           </form>
+            </div>
+
+    </div>
+
+  </body>
+</html>
+<dir>
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+
+    {{ form.email.label }} {{ form.email }} <br> <br>
+    {{ form.clas.label }} {{ form.clas }} <br> <br>
+    {{ form.submit() }}
+  </dir>

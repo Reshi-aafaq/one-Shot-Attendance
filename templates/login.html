@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Login </title>
+</head>
+<body bgcolor=#dwfadw>
+
+<br> <br> <br>
+
+<center>
+
+<font color="red" size="2px">
+    <b>
+    Enter password lenght between 5-10 <br>
+    Enter valid email id <br>  </b>
+
+ </font>
+<form method=POST>
+
+    <fieldset>
+
+        <legend> Login </legend>
+
+
+    <dir>
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+
+    {{ form.email.label }} {{ form.email }} <br> <br>
+    {{ form.password.label }} {{ form.password }} <br> <br>
+    {{ form.submit() }} <a href="{{ url_for('entermail') }}"> <b> Forget password</b></a> <br> <br>
+         {{ form.remember }}
+                    {{ form.remember.label }} <br> <br>
+
+    <p> Don't have an account? <a href = "{{ url_for('index') }}"> <font color="green"> Register
+           </font></a> </p>
+
+  </dir>
+
+
+
+
+
+
+ </fieldset>
+</form>
+
+</center>
+
+
+</body>
+</html>

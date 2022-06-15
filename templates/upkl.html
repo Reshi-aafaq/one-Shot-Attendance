@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename = 'css/styl.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+ <a href = "{{ url_for('logout') }}"> <font color="purple"> Logout
+                       </font></a>
+	<img class="wave" src= " {{ url_for('static',filename = 'images/wave.png') }}">
+	<div class="container">
+		<div class="img">
+			<img src="{{ url_for('static',filename = 'images/bg.svg') }}">
+		</div>
+
+        <div class="login-content">
+
+            <form method="post" enctype="multipart/form-data">
+            <img src="{{ url_for('static',filename = 'images/avatar.svg')}}">
+             <h2 class="title"><font color="red"> welcome</font></h2>
+
+            <div class="div">
+
+
+                {# This hidden_tag is a CSRF security feature. #}
+                {{ form.hidden_tag() }}
+
+                {{ form.sem.label }} {{ form.sem }}   <br>
+
+
+            </div>
+
+                <div class = 'div'>
+
+                 {{ form.section.label }} {{ form.section }}   <br>
+                </div>
+
+                <div class="div">
+                    {{ form.enrol.label }} {{ form.enrol }}   <br>
+                </div>
+
+            <div class="div">
+
+                {{ form.filu.label }} {{ form.filu }}  <br>
+
+                  </div>
+                <p class = 'btn'>  {{ form.submit() }}  </p>
+
+           </form>
+            </div>
+
+    </div>
+
+  </body>
+</html>
+

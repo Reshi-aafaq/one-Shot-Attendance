@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename = 'css/styl.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ {% block content %}
+ {% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {%  for msg in messages %}
+             <center> <font color="black" size="2px"> <p> {{ msg }}</p> </font> </center>
+
+              {% endfor %}
+
+           {% endif %}
+         {% endwith %}
+    {% endblock %}
+  <a href = "{{ url_for('logout') }}"> <font color="blue" size="4px"> Logout
+                       </font></a>
+	<img class="wave" src= " {{ url_for('static',filename = 'images/wave.png') }}">
+	<div class="container">
+		<div class="img">
+			<img src="{{ url_for('static',filename = 'images/bg.svg') }}">
+		</div>
+
+        <div class="login-content">
+
+            <form method="post" enctype="multipart/form-data">
+            <img src="{{ url_for('static',filename = 'images/avatar.svg')}}">
+            <h2 class="title">Welcome</h2>
+                <h3 class="title"><font size="3px" color="red">{{ session['clas'] }}th semester</font></h3>
+
+            <div class="div">
+
+
+                {# This hidden_tag is a CSRF security feature. #}
+                {{ form.hidden_tag() }}
+
+
+            </div>
+
+            <div class="div">
+
+                {{ form.section.label }} {{ form.section }}  <br>
+
+                  </div>
+                <div class="div">
+
+                 {{ form.subb.label }} {{ form.subb }}  <br>
+
+                </div>
+
+                <div class="div">
+
+                 {{ form.quan.label }} {{ form.quan }}  <br>
+
+                </div>
+
+                <div class="div">
+
+                 {{ form.filu.label }} {{ form.filu }}
+
+                </div>
+
+               <font size="2px" style="arial"> {{ form.remembr }} {{ form.remembr.label }} </font>  <p class="btn">  {{ form.submit() }} </p>
+
+                <div class="div">
+
+                    <a href = "{{ url_for('dwnld') }}"> <font color="green"> Download Attendance Sheet
+                       </font></a>
+        <a href = "{{ url_for('updatee') }}"> <font color="blue"> Upload face photos
+           </font></a>
+
+                </div>
+
+
+           </form>
+
+
+
+            </div>
+
+
+    </div>
+
+
+  </body>
+</html>
