@@ -78,6 +78,7 @@ def predictorr(src,mod,dec,pkldbb):
                                   color,
                                   lineType)
             present.append(stud)
+    print("working")       
     return {'image':imgarray,'present':present}
 
 
