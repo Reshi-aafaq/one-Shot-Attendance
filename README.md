@@ -1,3 +1,5 @@
+docker image at https://hub.docker.com/r/reshiaafaq/osa_docker
+
 Use python 3.7.9.
 
 pip install -r requirements.txt.
