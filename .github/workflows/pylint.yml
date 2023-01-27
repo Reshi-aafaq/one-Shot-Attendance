@@ -20,4 +20,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint --max-line-length=150 --disable=import-error $(git ls-files '*.py')
+        pylint --max-line-length=150 --disable=import-error,invalid-name,wrong-import-order $(git ls-files '*.py')
